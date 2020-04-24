@@ -60,10 +60,10 @@ app.layout = html.Div([
     State('missing_num', 'value')])
 def update_output(n_clicks, week_num, positive_num,missing_num):
     return u'''
-
+        The Button has been pressed {} times,
         missing urine ratio is "{}",
         and positive urine ratio is "{}"
-    '''.format(missing_num/week_num, positive_num/week_num)
+    '''.format(n_clicks, missing_num/week_num, positive_num/week_num)
 
 if __name__ == '__main__':
     app.run_server(debug=True)
